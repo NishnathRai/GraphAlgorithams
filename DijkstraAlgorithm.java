@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class DijkstraAlgorithm {
-    public int[] findPathsFromSource(int matrix[][],int src){
+    public static int[] findPathsFromSource(int matrix[][],int src){
         int ans[]=new int[matrix.length];
         Arrays.fill(ans,Integer.MAX_VALUE);
         ans[src]=0;

@@ -29,12 +29,19 @@ public class Main {
                 {18, 24, 3}, {24, 18, 3},
                 {19, 25, 9}, {25, 19, 9},
         };
-        matrix = makeMatrix(matrix,26);
+        int Dj[] = DijkstraAlgorithm.findPathsFromSource( makeMatrix(matrix,26),0);
+        int Bf[]=  BellmanFordAlgorithm.findPathsFromSource(matrix,0,26);
+        int Fw[]=  FloydWarshallAlgorithm.findPathsFromSource( makeMatrix(matrix,26),26);
+        System.out.println(Arrays.toString(Dj));
+        System.out.println(Arrays.toString(Bf));
+        System.out.println(Arrays.toString(Fw));
     }
 
     public static int[][] makeMatrix(int[][] matrix,int n) {
         int[][] ans =new int[n][n];
-        for(int[] arr :ans) Arrays.fill(arr,-1);
+        for(int[] arr :ans) {
+            Arrays.fill(arr, -1);
+        }
         for(int[] arr :matrix){
             int u = arr[0];
             int v = arr[1];
