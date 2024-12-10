@@ -29,7 +29,7 @@ public class Main {
                 {18, 24, 3}, {24, 18, 3},
                 {19, 25, 9}, {25, 19, 9},
         };
-        matrix = makeMatrix(matrix,5);
+        matrix = makeMatrix(matrix,26);
     }
 
     public static int[][] makeMatrix(int[][] matrix,int n) {
